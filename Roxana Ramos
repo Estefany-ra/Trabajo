@@ -1,0 +1,31 @@
+function calcularArea() {
+    const figura = prompt("Elige una figura (círculo, cuadrado, triángulo):").toLowerCase();
+
+    let area;
+
+    switch (figura) {
+        case 'círculo':
+            const radio = parseFloat(prompt("Ingresa el radio del círculo:"));
+            area = Math.PI * Math.pow(radio, 2);
+            break;
+
+        case 'cuadrado':
+            const lado = parseFloat(prompt("Ingresa el lado del cuadrado:"));
+            area = Math.pow(lado, 2);
+            break;
+
+        case 'triángulo':
+            const base = parseFloat(prompt("Ingresa la base del triángulo:"));
+            const altura = parseFloat(prompt("Ingresa la altura del triángulo:"));
+            area = (base * altura) / 2;
+            break;
+
+        default:
+            alert("Figura no válida");
+            return;
+    }
+
+    alert(`El área del ${figura} es: ${area}`);
+}
+
+calcularArea();
